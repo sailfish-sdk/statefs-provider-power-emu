@@ -1,0 +1,5 @@
+* Power properties emulation provider for statefs
+
+Provider purpose is to expose properties similar to ones contextkit
+power providers are exposing. It creates in and out namespaces and data written
+to BatteryEmu appears on Battery namespace end
