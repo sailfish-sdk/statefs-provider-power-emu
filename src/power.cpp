@@ -29,7 +29,7 @@
 class Provider : public statefs::AProvider
 {
 public:
-    Provider() : AProvider("power-emu") {
+        Provider(statefs_server *server) : AProvider("power-emu", server) {
         std::shared_ptr<Dst> dst(new Dst("Battery"));
         insert(std::static_pointer_cast<statefs::ANode>(dst));
 
@@ -52,10 +52,11 @@ public:
 
 static Provider *provider = nullptr;
 
-EXTERN_C struct statefs_provider * statefs_provider_get(void)
+EXTERN_C struct statefs_provider * statefs_provider_get
+(struct statefs_server *server)
 {
     if (provider)
         throw std::logic_error("provider ptr is already set");
-    provider = new Provider();
+    provider = new Provider(server);
     return provider;
 }

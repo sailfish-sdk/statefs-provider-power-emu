@@ -7,7 +7,7 @@ Group: System Environment/Libraries
 URL: http://github.com/nemomobile/statefs-provider-power-emu
 Source0: %{name}-%{version}.tar.bz2
 BuildRequires: cmake >= 2.8
-BuildRequires: pkgconfig(statefs-cpp) >= 0.2.17
+BuildRequires: pkgconfig(statefs-cpp) >= 0.3.1
 Requires: statefs
 
 %description
