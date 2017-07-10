@@ -4,7 +4,7 @@ Version: x.x.x
 Release: 1
 License: LGPLv2
 Group: System Environment/Libraries
-URL: http://github.com/nemomobile/statefs-provider-power-emu
+URL: http://github.com/sailfishos/statefs-provider-power-emu
 Source0: %{name}-%{version}.tar.bz2
 BuildRequires: cmake >= 2.8
 BuildRequires: pkgconfig(statefs-cpp) >= 0.3.2
